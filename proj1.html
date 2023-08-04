@@ -1,0 +1,354 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>c
+</head>
+<body id="body" class="md:flex md:flex-row">
+
+    <!-- header -->
+<ul id="bdg" class="bg-[url('/img/bg-sidebar-mobile.png')] bg-no-repeat bg-cover h-[10.74rem]  w-full  
+                    md:bg-[url('/img/bg-sidebar-desktop.png')] md:bg-no-repeat md:h-[36rem] md:w-[16rem] md:mt-12 
+                    md:ml-[8.5%] lg:ml-[15%]  md:rounded-s-xl">
+            <div class="md:h-full md:w-full md:mt-[-110px] flex justify-center gap-4 md:flex md:flex-col ">
+                <div class=" mt-5 ml-7 flex ">
+                    <label for="toggler" class="relative">
+                    <input id="mode" type="checkbox" class=" cursor-pointer appearance-none mt-3.5 h-7 rounded-full w-12 bg-gray-500 ">
+                    <span id="light" class="cursor-pointer bg-white w-6 h-6 ml-0.5 mt-4 rounded-full transition-transform duration-300 transform absolute start-0"></span>
+                    <span id="dark" class="cursor-pointer bg-white w-6 h-6 mr-0.5 mt-4 rounded-full transition-transform duration-300 transform absolute end-0 hidden"></span>
+                    </label>
+                    <h1 class="mt-4 ml-1 text-white font-bold text-lg ">Dark mode</h1>
+                </div> 
+            <div class="opacity-90 md:flex">
+                <button id="indicator1" class="mt-9 w-8 h-8 text-center rounded-3xl border font-semibold bg-white opacity-80 text-black border-white
+                        md:ml-7"><span>1</span></button>
+                <div class="hidden md:flex md:flex-col ">
+                    <h2 class="md:mt-7 md:ml-4 text-white">
+                        STEP 1
+                    </h2>
+                    <h1 class="md:ml-4 text-white font-bold tracking-wider">
+                        YOUR INFO
+                    </h1>
+                </div>
+            </div>
+
+            <li class="md:flex ">
+                <button id="indicator2" class="mt-9 w-8 h-8 text-center rounded-3xl border text-white border-white 
+                               md:mt-6 md:ml-7"><span>2</span></button>
+
+                <div class="hidden md:flex md:flex-col">
+                    <h2 class="md:mt-4 md:ml-4 text-white">
+                        STEP 2
+                    </h2>
+                    <h1 class="md:ml-4 text-white font-bold tracking-wider">
+                        SELECT PLAN
+                    </h1>
+                </div>
+            </li>
+
+            <li class="md:flex">
+                <button id="indicator3" class="mt-9 w-8 h-8 text-center rounded-3xl border text-white border-white
+                               md:mt-6 md:ml-7"><span>3</span></button>
+                <div class="hidden md:flex md:flex-col">
+                    <h2 class="md:mt-4 md:ml-4 text-white">
+                        STEP 3
+                    </h2>
+                    <h1 class="md:ml-4 text-white font-bold tracking-wider ">
+                        ADD ONS
+                    </h1>
+                </div>
+            </li>
+            
+            <li class="md:flex">
+                <button id="indicator4" class="mt-9 w-8 h-8 text-center rounded-3xl border text-white border-white
+                              md:mt-6 md:ml-7"><span>4</span></button>
+                <div class="hidden md:flex md:flex-col">
+                    <h2 class="md:mt-4 md:ml-4 text-white">
+                        STEP 4
+                    </h2>
+                    <h1 class="md:ml-4 text-white font-bold tracking-wider">
+                        SUMMARY
+                    </h1>
+                </div>
+            </li>
+            </div>
+           
+</ul>
+    <!-- sections of cards begins here -->
+    <!-- major div for all sections below -->
+            <div class="h-[36rem] w-[93vw] mt-[-4rem] rounded-xl ml-[3.55%] relative
+            md:w-[50vw] md:ml-0 md:h-[36rem]  md:mt-12 ">
+     <!-- (1) -->
+    <section id="page1" class="hiddn h-[36rem] rounded-e-xl transition-opacity duration-500 " >
+        <h1 id="pagea1" class=" ml-[3%] pt-7 pb-4 text-blue-950 tracking-wide text-2xl font-bold">
+            Personal info
+        </h1>
+        <p id="pagea2" class="ml-[3%] tracking-wide text-gray-500 pb-4">
+            Please provide your name, email address,<br> and phone number.
+        </p>
+        <!-- form begins here -->
+        <form id="my-form" action="">
+            <div class="flex flex-col py-2.5 gap-2 relative">
+            <label for="name" class="flex ml-[3%]">
+                <p class="mr-1 text-[17.5px] ">Name</p>
+                <span aria-label="required">*</span>
+                <!-- hidden error message -->
+                <div id="nameerror" class="absolute end-[3%] text-red-500 italic text-xs mt-2 hidden">Cannot leave Empty</div>
+            </label>
+            <input id="name" type="text" class="ml-[3%] h-10 w-[94%] border border-gray-300 
+            text-sm rounded-md px-5 py-2 focus:outline-2 focus:outline-sky-700 focus:outline-dashed" 
+            placeholder="e.g daniel napal ">
+            </input>
+            </div>
+
+            <div class="flex flex-col py-2.5 gap-2">
+            <label for="email" class="flex ml-[3%]">
+                <p class="mr-1 text-[17.5px]">Email Address</p>
+                <span aria-label="required">*</span>
+                <!-- hidden error message -->
+                <div id="mailerror" class="absolute end-[3%] text-red-500 italic text-xs mt-2 hidden">Cannot leave Empty</div>
+                <div id="mailinvalid" class="absolute end-[3%] text-red-500 italic text-xs mt-2 hidden">Invalid Email</div>
+            </label>
+            <input id="email" type="email" class="ml-[3%] h-10 w-[94%] border border-gray-300 
+            text-sm rounded-md px-5 py-2 focus:outline-2 focus:outline-sky-700 focus:outline-dashed " 
+            placeholder="e.g. professionapal@outlook.com"></input>
+            </div>
+
+            <div class="mt-3">
+            <label for="phone-number" class="flex ml-[3%]">
+                <p class="mr-1 text-[17.5px]">Phone number</p>
+                <span aria-label="required">*</span>
+                <!-- hidden error message -->
+                <div id="phoneerror" class="absolute end-[3%] text-red-500 italic text-xs mt-2 hidden">Cannot leave Empty</div>
+                <div id="phoneinvalid" class="absolute end-[3%] text-red-500 italic text-xs mt-2 hidden">Invalid Phone Number</div>
+            </label>
+            <div class="flex">
+                <div class="dropdown absolute z-10">
+                    <div class="flex ml-[13px] mt-2.5 w-[60px] h-9 rounded-s-md ">
+                        <div id="custom img" class="flex mt-2.5 ml-4">
+                            <img  class="h-3 w-5 hiddn" src="img/ng.png" alt="">
+                            
+                        </div>
+                        <div><svg id="arrowup" class=" cursor-pointer mt-2.5 ml-0.5 h-3 w-4 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z" clip-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <svg id="arrowdown" class=" cursor-pointer h-3 w-4 hiddn mt-2.5 ml-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                          </svg>
+                    </div>
+                    <!-- hidden country code options -->
+                    <ul id="drop" class=" ml-[5%] md:w-60 w-52 hidden h-36 overflow-y-auto bg-white shadow-xl border ">
+                      <li id="opng" class="flex gap-1 ml-2"><span id="flag-icon-us "><img class="h-3 w-5 mt-1.5 mr-1" src="img/ng.png" alt=""></span> Nigeria <span class="text-gray-400">(+234)</span></li>
+                      <li id="opusa" class="flex gap-0.5 ml-2"><span id="flag-icon-us "><img class="h-5 w-6 mt-1 mr-1" src="img/united-states.png" alt=""></span> United-states <span class="text-gray-400">(+1)</span></li>
+                      <li id="opuk" class="flex gap-1 ml-2" ><span id="flag-icon-gb"><img class="h-3 w-5 mt-1.5 mr-1" src="img/uk.png" alt=""></span> United Kingdom <span class="text-gray-400">(+44)</span></li>
+                      <li id="opaus" class="flex gap-1 ml-2"><span id="flag-icon-au"><img class="h-3 w-5 mt-1.5 mr-1" src="img/aus.png" alt=""></span> Australia <span class="text-gray-400">(+61)</span></li>
+                      <li id="opfrc" class="flex gap-1 ml-2"><span id="flag-icon-fr"><img class="h-3 w-5 mt-1.5 mr-1" src="img/france.png" alt=""></span> France <span class="text-gray-400">(+33)</span></li>
+                      <li id="opger" class="flex gap-1 ml-2"><span id="flag-icon-de"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ger.png" alt=""></span> Germany <span class="text-gray-400">(+49)</span></li>
+                      <li id="opity" class="flex gap-1 ml-2"><span id="flag-icon-it"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ity.png" alt=""></span> Italy <span class="text-gray-400">(+39)</span></li>
+                      <br><br><br><br><br><br>
+                      <li class="flex"><span id="flag-icon-fr"><img class="h-3 w-5 mt-1.5 mr-1" src="img/france.png" alt=""></span> FRC +33</li>
+                      <li class="flex"><span id="flag-icon-de"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ger.png" alt=""></span> GER +49</li>
+                      <li class="flex"><span id="flag-icon-it"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ity.png" alt=""></span> ITY +39</li><li class="flex"><span id="flag-icon-fr"><img class="h-3 w-5 mt-1.5 mr-1" src="img/france.png" alt=""></span> FRC +33</li>
+                      <li class="flex"><span id="flag-icon-de"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ger.png" alt=""></span> GER +49</li>
+                      <li class="flex"><span id="flag-icon-it"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ity.png" alt=""></span> ITY +39</li><li class="flex"><span id="flag-icon-fr"><img class="h-3 w-5 mt-1.5 mr-1" src="img/france.png" alt=""></span> FRC +33</li>
+                      <li class="flex"><span id="flag-icon-de"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ger.png" alt=""></span> GER +49</li>
+                    </ul> 
+                </div>
+            <input id="phone" type="phone-number" class="ml-[3%] h-10 w-[94%] border border-gray-300 over
+            text-sm rounded-md px-20 z-0 py-2 focus:outline-2 focus:outline-sky-700 focus:outline-dashed mt-2 relative" 
+            placeholder="08166052752"></input>
+            </div>
+            </div>
+
+            <div class="mt-16">
+                <div class="flex justify-between">
+                    <button class="back transition-all  ease-in-out duration-200 ml-3 font-semibold invisible">Go back</button>
+
+                    <button id="next-button" class="h-14 mr-[3.7%] w-28 bg-blue-950 text-lg font-bold text-white tracking-wide rounded-md ">Next Step</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- section 2 begins here-->
+    <!-- (2) -->
+    <section id="page2" class="hidden absolutle w-full  h-[30rem]  transition-opacity duration-500 ">
+        <div class="flex flex-col">
+            <h1 class=" ml-[4.95%] pt-7 pb-4 text-blue-950 tracking-wide text-2xl font-bold">
+            Select your plan
+            </h1>
+            <p class="ml-[4.95%] tracking-wide text-gray-500 pb-4">
+            You have the option of monthly or yearly billing.
+            </p>
+            <!-- options for subs -->
+            <form class="" id="form" >
+            <div id="errormsg" class="ml-[32%] mt-[-4] mb-2 rounded-sm font-semibold text-red-500 w-56 text-center  h-5 italic text-md hidden">You have to select an Option</div>
+            <input id="arcade" type="checkbox" class="appearance-none border   border-gray-300  w-[90%]
+             ml-[4.95%] h-[72px] rounded-md transition-all ease-in-out duration-200 hover:scale-105 
+             hover:border-blue-900 cursor-pointer hover:shadow-2xl" value="arcade">
+            <label for="arcade" class="absolute start-0  flex mt-[-60] gap-10 ml-[10%] ">
+                <img src="img/joystick.png" class="h-8 w-10 mt-2" alt="">
+                <div id="arddiv" >
+                    <p id="ard" class="font-bold text-gray-700">Arcade</p>
+                    <p id="mon1" class="text-gray-500">$6/mon</p>
+                </div>
+            </label>
+
+            <input id="advanced" type="checkbox" class="appearance-none border  border-gray-300 w-[90%]
+             ml-[4.95%] h-[72px] rounded-md transition-all ease-in-out duration-200 hover:scale-105 
+             hover:border-blue-900 cursor-pointer hover:shadow-2xl mt-3" value="arcade">
+            <label for="arcade" class="absolute start-0  flex mt-[-60] gap-10 ml-[10%] ">
+                <img src="img/gamepad.png" class="h-8 w-9 mt-2" alt="">
+                <div >
+                    <p class="font-bold text-gray-700">Advanced</p>
+                    <p id="mon2" class="text-gray-500">$8/mon</p>
+                </div>
+            </label>
+
+            <input id="pro" type="checkbox" class="appearance-none border border-gray-300  w-[90%]
+             ml-[4.95%] h-[72px] rounded-md transition-all ease-in-out duration-200 hover:scale-105 
+             hover:border-blue-900 cursor-pointer hover:shadow-2xl mt-3" value="arcade">
+            <label for="arcade" class="absolute start-0  flex mt-[-60] gap-10 ml-[10%] ">
+                <img src="img/game-controller.png" class="h-8 w-9 mt-2" alt="">
+                <div >
+                    <p class="font-bold text-gray-700">Pro</p>
+                    <p id="mon3" class="text-gray-500">$12/mon</p>
+                </div>
+            </label>
+        </form>
+            <!-- switch button -->
+        <div class="w-[90%] h-[60px] bg-slate-300 ml-[4.95%] mt-4 rounded-md  flex justify-evenly gap-[-16]">
+            <h1 id="mon" class=" text-gray-600 mt-4 start-0 ml-[]">Monthly</h1>
+            <label for="toggler" class="relative">
+            <input id="checkbox" type="checkbox" class=" cursor-pointer appearance-none mt-3.5 h-7 rounded-full w-12 bg-gray-500 ">
+            <span id="monthly" class="cursor-pointer bg-white w-6 h-6 ml-0.5 mt-4 rounded-full transition-transform duration-300 transform absolute start-0"></span>
+            <span id="yearly" class="cursor-pointer bg-white w-6 h-6 mr-0.5 mt-4 rounded-full transition-transform duration-300 transform absolute end-0 hidden"></span>
+            </label>
+            <h1 id="year" class=" mt-4 text-gray-600 ">Yearly</h1>
+        </div> 
+        <!-- next section -->
+        <div class="mt-10">
+            <div class="flex justify-between mb-7">
+                <button id="goback1" class="back transition-all ease-in-out duration-200 ml-[4.95%] font-semibold ">Go back</button>
+
+                <button id="button2" class="h-14 mr-[4.95%] w-28 bg-blue-950 text-lg font-bold text-white tracking-wide rounded-md ">Next Step</button>
+            </div>
+        </div>
+        </div>    
+    </section>    
+<!-- section 3 begins here-->
+    <!-- (3) -->
+    <section id="page3" class="hidden absolutle w-full  h-[30rem]">
+        <div class="flex flex-col">
+            <h1 class=" ml-[4.95%] pt-7 pb-4 text-blue-950 tracking-wide text-2xl font-bold">
+            Pick add-ons
+            </h1>
+            <p class="ml-[4.95%] tracking-wide text-gray-500 pb-4">
+            Add-ons helps enhance your gaming experience.
+            </p>
+            <div id="errormsg1" class="ml-[32%] mt-[-4] mb-2 rounded-sm font-semibold text-red-500 w-56 text-center  h-5 italic text-md hidden">You have to select an Option</div>
+            <!-- options for add-ons -->
+            <form id="options" action="form3">
+            <div class=" border  border-gray-300  w-[90%] ml-[4.95%] h-[80px] rounded-md  relative
+            transition-all ease-in-out duration-200 hover:scale-105 hover:border-blue-900 cursor-pointer hover:shadow-2xl" >
+            <input id="option1" type="radio" class="w-5 h-5 absolute mt-6 ml-2 " name="option" value="option1">
+            <label for="option1" class="absolute flex  w-[82%] justify-between mt-3.5   ml-[15%]  ">
+                <div class="flex flex-col">
+                    <h2 class="font-medium text-gray-700">Online Services</h2>
+                    <p id="mon1" class="text-gray-500 leading-tight text-sm">Access to multiplayer games</p>
+                </div>
+                <p id="swip1" class="my-auto text-md text-blue-700 ">$3/mon</p>
+            </label>
+            </div>
+
+            <div class=" border mt-3 border-gray-300  w-[90%] ml-[4.95%] h-[80px] rounded-md  relative
+            transition-all ease-in-out duration-200 hover:scale-105 hover:border-blue-900 cursor-pointer hover:shadow-2xl" >
+            <input id="option2" type="radio" class="w-5 h-5 absolute mt-6 ml-2" name="option" value="option2" value="arcade">
+            <label for="option2" class="absolute flex  w-[82%] justify-between mt-3.5   ml-[15%]  ">
+                <div class="flex flex-col">
+                    <h2 class="font-medium text-gray-700">Larger Storage</h2>
+                    <p id="mon1" class="text-gray-500 leading-tight text-sm">Extra 1TB of cloud</p>
+                </div>
+                <p id="swip2" class="my-auto text-md text-blue-700 ">$4/mon</p>
+            </label>
+            </div>
+
+            <div class=" border mt-3 border-gray-300  w-[90%] ml-[4.95%] h-[80px] rounded-md  relative
+            transition-all ease-in-out duration-200 hover:scale-105 hover:border-blue-900 cursor-pointer hover:shadow-2xl" >
+            <input id="option3" type="radio" class="w-5 h-5  absolute mt-6 ml-2" name="option" value="option3" value="arcade">
+            <label for="option3" class="absolute flex  w-[82%] justify-between mt-3.5   ml-[15%]  ">
+                <div class="flex flex-col">
+                    <h2 class="font-medium text-gray-700">Custom Profile</h2>
+                    <p id="mon1" class="text-gray-500 leading-tight text-sm">Personalized profile</p>
+                </div>
+                <p id="swip3" class="my-auto text-md text-blue-700 ">$5/mon</p>
+            </label>
+            </div>
+            </form>
+   
+        <!-- next section -->
+        <div class="mt-16">
+            <div class="flex justify-between mb-7">
+                <button id="goback2" class="back transition-all ease-in-out duration-200 ml-[4.95%] font-semibold invisibl">Go back</button>
+
+                <button id="button3" class="h-14 mr-[4.95%] w-28 bg-blue-950 text-lg font-bold text-white tracking-wide rounded-md ">Next Step</button>
+            </div>
+        </div>
+        </div>    
+    </section>    
+<!-- section 4 begins here-->
+    <!-- (4) -->
+    <section id="page4" class=" hidden absolutle w-full  h-[30rem]">
+        <div class="flex flex-col">
+            <h1 class=" ml-[12%] pt-7 pb-4 text-blue-950 tracking-wide text-2xl font-bold">
+            Finishing Up
+            </h1>
+            <p class="ml-[12%] tracking-wide text-gray-500 pb-4">
+            Double-check everything looks OK before confirming.
+            </p>
+            <!-- options for add-ons -->
+            <div>
+                <div id="Empty1" class="flex justify-between w-[75%] h-16  ml-[12%] bg-slate-200 mt-2 ">
+                    <p id="a1" class="hidden ml-4 mt-4 text-lg font-semibold tracking-wider">Arcade</p>
+                    <p id="ab" class="hidden mr-4 mt-4 text-lg font-semibold text-red-900"></p>
+                    <p id="new1" class="hidden"></p>
+                </div>
+
+                <div id="Empty2" class="flex justify-between w-[75%] h-12  ml-[12%] bg-slate-200 mt-2 ">
+                    <p id="b1" class="hidden ml-4 mt-2 font-semibold"></p>
+                    <p id="bb" class="hidden mr-4 mt-2 font-semibold text-red-900"></p>
+                    <p id="new2" class="hidden"></p>
+                </div>
+                <div class="flex justify-between w-[75%] h-10  ml-[12%] bg-slate-200 mt-7 ">
+                    <p id="total1" class="ml-4 mt-2 font-semibold text-xl tracking-wider">Total (monthly)</p>
+                    <p id="total" class="mr-4 mt-2 font-semibold text-xl tracking-wider text-red-900" ></p>
+                </div>
+            </div>
+        <!-- confirm button -->
+        <div class="mt-16">
+            <div class="flex justify-between mb-7">
+                <button id="goback3" class="back transition-all ease-in-out duration-200 ml-[12%] font-semibold invisibl">Go back</button>
+
+                <button id="button4" class="h-14 mr-[12%] w-28 bg-blue-500 text-lg font-bold text-white tracking-wide rounded-md ">Confirm</button>
+            </div>
+        </div>
+        </div>    
+    </section>    
+<!-- End-->
+    <!-- (5) -->
+    <section id="lastpage" class="hidden absolute">
+        <div class="h-[450px] w-[90%] ml-[5%] mt-[30%]">
+            <img class="m-auto " src="img/new/verimrk.png" alt="">
+            <h1 class="text-center text-2xl  text-blue-950 font-bold tracking-wide mt-6">Thank you!</h1>
+            <p class="text-center text-gray-500 mt-4">Thanks for confirming your subscription! We hope you have fun using our platform.
+            If you ever need support, please feel free to email us at danielolagbegi1@outlook.com.</p>
+        </div>
+    </section>
+
+</div>
+
+
+</body>
+<script src="proj1.js"></script>
+</html>
