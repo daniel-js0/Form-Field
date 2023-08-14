@@ -3,22 +3,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>c
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body id="body" class="md:flex md:flex-row">
-
+     <!--https://todoappwadly.vercel.app/-->
     <!-- header -->
-<ul id="bdg" class="bg-[url('/img/bg-sidebar-mobile.png')] bg-no-repeat bg-cover h-[10.74rem]  w-full  
-                    md:bg-[url('/img/bg-sidebar-desktop.png')] md:bg-no-repeat md:h-[36rem] md:w-[16rem] md:mt-12 
+<ul id="bdg" class="bg-[url('/formField/img/bg-sidebar-mobile.png')] bg-no-repeat bg-cover h-[10.74rem]  w-full  
+                    md:bg-[url('/formField/img/bg-sidebar-desktop.png')] md:bg-no-repeat md:h-[36rem] md:w-[16rem] md:mt-12 
                     md:ml-[8.5%] lg:ml-[15%]  md:rounded-s-xl">
             <div class="md:h-full md:w-full md:mt-[-110px] flex justify-center gap-4 md:flex md:flex-col ">
                 <div class=" mt-5 ml-7 flex ">
-                    <label for="toggler" class="relative">
-                    <input id="mode" type="checkbox" class=" cursor-pointer appearance-none mt-3.5 h-7 rounded-full w-12 bg-gray-500 ">
-                    <span id="light" class="cursor-pointer bg-white w-6 h-6 ml-0.5 mt-4 rounded-full transition-transform duration-300 transform absolute start-0"></span>
-                    <span id="dark" class="cursor-pointer bg-white w-6 h-6 mr-0.5 mt-4 rounded-full transition-transform duration-300 transform absolute end-0 hidden"></span>
-                    </label>
-                    <h1 class="mt-4 ml-1 text-white font-bold text-lg ">Dark mode</h1>
+                    <svg id="mode1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 mt-10  ml-20 hiddn cursor-pointer  transition-transform">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+                      </svg>
+                      <svg id="dark1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-8  mt-10 ml-20 hidden cursor-pointer  text-white  transition-transform">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                      </svg>
+                   
                 </div> 
             <div class="opacity-90 md:flex">
                 <button id="indicator1" class="mt-9 w-8 h-8 text-center rounded-3xl border font-semibold bg-white opacity-80 text-black border-white
@@ -79,6 +80,8 @@
     <!-- major div for all sections below -->
             <div class="h-[36rem] w-[93vw] mt-[-4rem] rounded-xl ml-[3.55%] relative
             md:w-[50vw] md:ml-0 md:h-[36rem]  md:mt-12 ">
+
+
      <!-- (1) -->
     <section id="page1" class="hiddn h-[36rem] rounded-e-xl transition-opacity duration-500 " >
         <h1 id="pagea1" class=" ml-[3%] pt-7 pb-4 text-blue-950 tracking-wide text-2xl font-bold">
@@ -127,7 +130,7 @@
                 <div class="dropdown absolute z-10">
                     <div class="flex ml-[13px] mt-2.5 w-[60px] h-9 rounded-s-md ">
                         <div id="custom img" class="flex mt-2.5 ml-4">
-                            <img  class="h-3 w-5 hiddn" src="img/ng.png" alt="">
+                            <img  class="h-3 w-5 hiddn" src="/formField/img/ng.png" alt="">
                             
                         </div>
                         <div><svg id="arrowup" class=" cursor-pointer mt-2.5 ml-0.5 h-3 w-4 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -140,13 +143,13 @@
                     </div>
                     <!-- hidden country code options -->
                     <ul id="drop" class=" ml-[5%] md:w-60 w-52 hidden h-36 overflow-y-auto bg-white shadow-xl border ">
-                      <li id="opng" class="flex gap-1 ml-2"><span id="flag-icon-us "><img class="h-3 w-5 mt-1.5 mr-1" src="img/ng.png" alt=""></span> Nigeria <span class="text-gray-400">(+234)</span></li>
-                      <li id="opusa" class="flex gap-0.5 ml-2"><span id="flag-icon-us "><img class="h-5 w-6 mt-1 mr-1" src="img/united-states.png" alt=""></span> United-states <span class="text-gray-400">(+1)</span></li>
-                      <li id="opuk" class="flex gap-1 ml-2" ><span id="flag-icon-gb"><img class="h-3 w-5 mt-1.5 mr-1" src="img/uk.png" alt=""></span> United Kingdom <span class="text-gray-400">(+44)</span></li>
-                      <li id="opaus" class="flex gap-1 ml-2"><span id="flag-icon-au"><img class="h-3 w-5 mt-1.5 mr-1" src="img/aus.png" alt=""></span> Australia <span class="text-gray-400">(+61)</span></li>
-                      <li id="opfrc" class="flex gap-1 ml-2"><span id="flag-icon-fr"><img class="h-3 w-5 mt-1.5 mr-1" src="img/france.png" alt=""></span> France <span class="text-gray-400">(+33)</span></li>
-                      <li id="opger" class="flex gap-1 ml-2"><span id="flag-icon-de"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ger.png" alt=""></span> Germany <span class="text-gray-400">(+49)</span></li>
-                      <li id="opity" class="flex gap-1 ml-2"><span id="flag-icon-it"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ity.png" alt=""></span> Italy <span class="text-gray-400">(+39)</span></li>
+                      <li id="opng" class="flex gap-1 ml-2"><span id="flag-icon-us "><img class="h-3 w-5 mt-1.5 mr-1" src="/formField/img/ng.png" alt=""></span> Nigeria <span class="text-gray-400">(+234)</span></li>
+                      <li id="opusa" class="flex gap-0.5 ml-2"><span id="flag-icon-us "><img class="h-5 w-6 mt-1 mr-1" src="/formField/img/united-states.png" alt=""></span> United-states <span class="text-gray-400">(+1)</span></li>
+                      <li id="opuk" class="flex gap-1 ml-2" ><span id="flag-icon-gb"><img class="h-3 w-5 mt-1.5 mr-1" src="/formField/img/uk.png" alt=""></span> United Kingdom <span class="text-gray-400">(+44)</span></li>
+                      <li id="opaus" class="flex gap-1 ml-2"><span id="flag-icon-au"><img class="h-3 w-5 mt-1.5 mr-1" src="/formField/img/aus.png" alt=""></span> Australia <span class="text-gray-400">(+61)</span></li>
+                      <li id="opfrc" class="flex gap-1 ml-2"><span id="flag-icon-fr"><img class="h-3 w-5 mt-1.5 mr-1" src="/formField/img/france.png" alt=""></span> France <span class="text-gray-400">(+33)</span></li>
+                      <li id="opger" class="flex gap-1 ml-2"><span id="flag-icon-de"><img class="h-3 w-5 mt-1.5 mr-1" src="/formField/img/ger.png" alt=""></span> Germany <span class="text-gray-400">(+49)</span></li>
+                      <li id="opity" class="flex gap-1 ml-2"><span id="flag-icon-it"><img class="h-3 w-5 mt-1.5 mr-1" src="/formField/img/ity.png" alt=""></span> Italy <span class="text-gray-400">(+39)</span></li>
                       <br><br><br><br><br><br>
                       <li class="flex"><span id="flag-icon-fr"><img class="h-3 w-5 mt-1.5 mr-1" src="img/france.png" alt=""></span> FRC +33</li>
                       <li class="flex"><span id="flag-icon-de"><img class="h-3 w-5 mt-1.5 mr-1" src="img/ger.png" alt=""></span> GER +49</li>
@@ -188,7 +191,7 @@
              ml-[4.95%] h-[72px] rounded-md transition-all ease-in-out duration-200 hover:scale-105 
              hover:border-blue-900 cursor-pointer hover:shadow-2xl" value="arcade">
             <label for="arcade" class="absolute start-0  flex mt-[-60] gap-10 ml-[10%] ">
-                <img src="img/joystick.png" class="h-8 w-10 mt-2" alt="">
+                <img src="/formField/img/joystick.png" class="h-8 w-10 mt-2" alt="">
                 <div id="arddiv" >
                     <p id="ard" class="font-bold text-gray-700">Arcade</p>
                     <p id="mon1" class="text-gray-500">$6/mon</p>
@@ -199,7 +202,7 @@
              ml-[4.95%] h-[72px] rounded-md transition-all ease-in-out duration-200 hover:scale-105 
              hover:border-blue-900 cursor-pointer hover:shadow-2xl mt-3" value="arcade">
             <label for="arcade" class="absolute start-0  flex mt-[-60] gap-10 ml-[10%] ">
-                <img src="img/gamepad.png" class="h-8 w-9 mt-2" alt="">
+                <img src="/formField/img/gamepad.png" class="h-8 w-9 mt-2" alt="">
                 <div >
                     <p class="font-bold text-gray-700">Advanced</p>
                     <p id="mon2" class="text-gray-500">$8/mon</p>
@@ -210,7 +213,7 @@
              ml-[4.95%] h-[72px] rounded-md transition-all ease-in-out duration-200 hover:scale-105 
              hover:border-blue-900 cursor-pointer hover:shadow-2xl mt-3" value="arcade">
             <label for="arcade" class="absolute start-0  flex mt-[-60] gap-10 ml-[10%] ">
-                <img src="img/game-controller.png" class="h-8 w-9 mt-2" alt="">
+                <img src="/formField/img/game-controller.png" class="h-8 w-9 mt-2" alt="">
                 <div >
                     <p class="font-bold text-gray-700">Pro</p>
                     <p id="mon3" class="text-gray-500">$12/mon</p>
@@ -339,7 +342,7 @@
     <!-- (5) -->
     <section id="lastpage" class="hidden absolute">
         <div class="h-[450px] w-[90%] ml-[5%] mt-[30%]">
-            <img class="m-auto " src="img/new/verimrk.png" alt="">
+            <img class="m-auto " src="/formField/img/verimrk.png" alt="">
             <h1 class="text-center text-2xl  text-blue-950 font-bold tracking-wide mt-6">Thank you!</h1>
             <p class="text-center text-gray-500 mt-4">Thanks for confirming your subscription! We hope you have fun using our platform.
             If you ever need support, please feel free to email us at danielolagbegi1@outlook.com.</p>
@@ -352,3 +355,5 @@
 </body>
 <script src="proj1.js"></script>
 </html>
+
+<!--  -->

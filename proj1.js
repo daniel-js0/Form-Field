@@ -820,9 +820,8 @@ button4.addEventListener('click', nextstepclick4);
         }
 }
 
-const mode = document.getElementById('mode');
-const light = document.getElementById('light');
-const dark = document.getElementById('dark');
+const mode = document.getElementById('mode1');
+const dark = document.getElementById('dark1');
 const bdg = document.getElementById('bdg');
 const body = document.getElementById('body');
 const pagea1 = document.getElementById('pagea1');
@@ -832,46 +831,68 @@ const pagea2= document.getElementById('pagea2');
 
 
 function darkmode(){
-        light.textContent = 'clicked';
+        mode.textContent = 'clicked';
         
 }
-light.addEventListener('click', darkmode);
+mode.addEventListener('click', darkmode);
 function darkmode (){
         if(dark.classList.contains('hidden')){
         dark.classList.remove('hidden');
-        light.classList.add('hidden');
         bdg.style.backgroundImage = 'url("/img/bg-blackn.png")';
-        body.classList.add('bg-neutral-500');
+        body.classList.add('bg-gray-950','transition','ease-in-out', 'delay-300');
         page1.classList.add('text-white');
-        page1.classList.add('bg-black');
+        page1.classList.add('bg-gray-600', 'transition','ease-in-out', 'delay-200' );
         pagea1.classList.add('text-white');
         pagea2.classList.add('text-white');
-        button.classList.add('bg-white');
+        button.classList.add('bg-white', 'transition','ease-in-out', 'delay-200' );
         button.classList.replace('text-white', 'text-black');
-        
+        mode.classList.add('hidden');
         }
 }
 
 function lightmode(){
-        light.textContent = 'clicked';
+        dark.textContent = 'clicked';
         
 }
 dark.addEventListener('click', lightmode);
 function lightmode (){
-        if(light.classList.contains('hidden')){
+        if(mode.classList.contains('hidden')){
         dark.classList.add('hidden');
-        light.classList.remove('hidden');
-        bdg.style.backgroundImage = 'url("/img/bg-sidebar-desktop.png")';
-        body.classList.remove('bg-neutral-500');
+        bdg.style.backgroundImage = 'url("/formField/img/bg-sidebar-desktop.png")';
+        body.classList.remove('bg-gray-950');
         page1.classList.remove('text-white');
-        page1.classList.remove('bg-black');
+        page1.classList.remove('bg-gray-600');
         pagea1.classList.remove('text-white');
         pagea2.classList.remove('text-white');
         button.classList.remove('bg-white');
         button.classList.replace('text-black', 'text-white');
+        mode.classList.remove('hidden');
         
         }
 }
 
 
 // https://awesome-react-markdown-notes.netlify.app/
+
+// Light mode icon animation toggle
+mode.addEventListener ('mouseenter', onmouseenter1)
+function onmouseenter1 (o){
+    o.preventDefault();
+    if(mode.classList.contains('cursor-pointer')){
+        mode.classList.add('animate-spin');
+        setTimeout(() => {
+            mode.classList.remove('animate-spin');},1000);
+
+         }
+} 
+// Dark mode icon animation toggle
+dark.addEventListener ('mouseenter', onmouseenter)
+function onmouseenter (p){
+    p.preventDefault();
+    if(dark.classList.contains('cursor-pointer')){
+        dark.classList.add('animate-spin');
+        setTimeout(() => {
+            dark.classList.remove('animate-spin');},800);
+
+         }
+}
